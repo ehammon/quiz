@@ -1,0 +1,31 @@
+h2{
+    font-size: 5rem;
+    color: var(--sienna);
+}
+
+/* styling the question/answer container */
+.answer-container {
+    display: flex;
+    width: 100%;
+    font-size: 2.0rem;
+    border: .2rem solid var(--olive);
+    margin-bottom: .5rem;
+}
+
+.answer-index {
+    color: var(--white);
+    background-color: var(--olive);
+    padding: 1.5rem 2.5rem;
+    font-size: 2.3;
+}
+
+.answer-text {
+    padding: 1.5rem;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
