@@ -1,0 +1,61 @@
+:root {
+    background-color:floralwhite; 
+    font-size: 62.5%;
+    --olive: olive;
+    --sienna: sienna;
+    --white: floralwhite;
+    --correct: 
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    color:var(--olive);
+}
+
+h1 {
+    font-size: 5.5rem;
+    color:var(--sienna);
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* set the max width to 850px with large screen, smaller screens will take up full width bc 100vw */
+    max-width: 80rem;
+    /* keeps the contents centered no matter screen size */ 
+    margin: 0 auto; 
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width:28rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border: .2rem solid var(--olive);
+    padding: 1rem 4rem;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--olive);
+    color: var(--white);
+}
