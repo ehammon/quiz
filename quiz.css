@@ -1,7 +1,16 @@
-h2{
+h2 {
     font-size: 5rem;
     color: var(--sienna);
 }
+
+header {
+    display: flex;
+    width: 100vw;
+    font-size: 2.0rem;
+    justify-content: space-between;
+    padding: .8rem .8rem 0 .8rem;
+}
+
 
 /* styling the question/answer container */
 .answer-container {
@@ -21,6 +30,7 @@ h2{
 
 .answer-text {
     padding: 1.5rem;
+    width: 100%;
 }
 
 .answer-container:hover {

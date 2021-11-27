@@ -1,5 +1,9 @@
 var question = document.getElementById("question");
-var answer = document.getElementById("answer-text");
+let answer = Array.from(document.getElementById("answer-text"));
+let score = document.getElementById("score");
+
+let currentQuestion = {};
+let availableQuestions = [];
 
 //create array of questions and answers
 let questions = [
@@ -48,3 +52,39 @@ let questions = [
         answer: 2,
     },
 ]
+
+//function to start the quiz and start the countdown
+var startGame = function() {
+    //resets stats
+    score = 0;
+    timer = 60000;
+    //spread syntax to access all questions in array
+    availableQuestions = [...questions];
+
+    console.log(availableQuestions);
+
+getNewQuestion();
+
+};
+
+function getNewQuestion() {
+    let i = 0; i < availableQuestions.length; i++;
+    if (availableQuestions.length > 0 && timer > 0) {
+        const currentQuestion = availableQuestions[i];
+        question.innerText = currentQuestion.question;
+
+        
+    }
+
+
+};  
+//function to ask questions (for loop?)
+    //check that there are more questions and time for another question
+
+
+startGame();
+
+//localStorage to store high scores
+
+/*setTimeout function will need the endGame as an argument so endGame will be called after the set 
+amount of time has passed || the user answers all questions */
