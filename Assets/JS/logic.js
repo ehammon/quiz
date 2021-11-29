@@ -1,5 +1,5 @@
 var question = document.getElementById("question");
-let answer = Array.from(document.getElementById("answer-text"));
+let answers = Array.from(document.getElementById("answer-text"));
 let score = document.getElementById("score");
 
 let currentQuestion = {};
@@ -14,15 +14,6 @@ let questions = [
         choice3: 'display:box;',
         choice4: 'flex:flexbox;',
         answer: 1,
-    },
-
-    {
-        question: 'How do you declare a function with a variable name "sum" in JavaScript?',
-        choice1: 'variable = sum;',
-        choice2: 'var = --sum;',
-        choice3: 'var sum = function();',
-        choice4: 'var (--sum) = function();',
-        answer: 3,
     },
 
     {
@@ -68,19 +59,15 @@ getNewQuestion();
 };
 
 function getNewQuestion() {
-    let i = 0; i < availableQuestions.length; i++;
-    if (availableQuestions.length > 0 && timer > 0) {
+    //why is this not bringing up the first question in array?
+    let i = 0; i <= (availableQuestions.length - 1); i++;
+    if (availableQuestions.length >= 0 && timer > 0) {
         const currentQuestion = availableQuestions[i];
         question.innerText = currentQuestion.question;
 
-        
+        //populate each answer choice
     }
-
-
 };  
-//function to ask questions (for loop?)
-    //check that there are more questions and time for another question
-
 
 startGame();
 
